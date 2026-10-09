@@ -1,0 +1,406 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowPilot — Welcome Email Copywriting Case Study</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #f5f5f0;
+      color: #202c3b;
+      line-height: 1.7;
+    }
+
+    .page {
+      width: min(100% - 32px, 1050px);
+      margin: 40px auto;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 36px;
+      font-size: 13px;
+      color: #69766f;
+    }
+
+    .brand {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      font-size: 20px;
+      color: #203d32;
+    }
+
+    .pill {
+      border: 1px solid #d5ded5;
+      border-radius: 30px;
+      padding: 7px 12px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      background: #dcebe0;
+      border-radius: 28px;
+      padding: clamp(28px, 6vw, 70px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #547262;
+      margin-bottom: 18px;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Manrope', sans-serif;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: clamp(38px, 7vw, 72px);
+      max-width: 720px;
+      letter-spacing: -2.5px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 620px;
+      color: #52685b;
+      font-size: 17px;
+    }
+
+    .hero-shape {
+      width: 150px;
+      height: 150px;
+      border-radius: 45% 55% 58% 42%;
+      background: #b3d5bc;
+      position: absolute;
+      right: -40px;
+      bottom: -50px;
+      transform: rotate(25deg);
+    }
+
+    .section {
+      margin-top: 54px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #728077;
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: clamp(26px, 4vw, 38px);
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+    }
+
+    .intro {
+      max-width: 700px;
+      color: #68746d;
+    }
+
+    .email-shell {
+      max-width: 700px;
+      margin: 28px auto 0;
+      background: #ffffff;
+      border: 1px solid #e6e9e3;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 18px 50px rgba(36, 61, 46, 0.07);
+    }
+
+    .email-header {
+      padding: 22px 28px;
+      border-bottom: 1px solid #edf0eb;
+      background: #fbfcf9;
+    }
+
+    .email-header div {
+      font-size: 12px;
+      color: #78847c;
+      margin: 5px 0;
+      overflow-wrap: anywhere;
+    }
+
+    .email-body {
+      padding: clamp(24px, 5vw, 46px);
+    }
+
+    .email-logo {
+      font-family: 'Manrope', sans-serif;
+      font-size: 19px;
+      font-weight: 800;
+      color: #2c6346;
+      margin-bottom: 34px;
+    }
+
+    .email-body h3 {
+      font-size: clamp(27px, 4vw, 38px);
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .email-body p {
+      color: #59665d;
+      margin-bottom: 18px;
+    }
+
+    .email-button {
+      display: inline-block;
+      background: #285b40;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 13px 21px;
+      border-radius: 9px;
+      font-weight: 700;
+      font-size: 13px;
+      margin: 8px 0 22px;
+    }
+
+    .email-note {
+      font-size: 12px;
+      color: #8a948d;
+      border-top: 1px solid #edf0eb;
+      padding-top: 20px;
+      margin-top: 16px;
+    }
+
+    .strategy-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .strategy-card {
+      background: #ffffff;
+      border: 1px solid #e6e9e3;
+      border-radius: 18px;
+      padding: 22px;
+    }
+
+    .strategy-card span {
+      font-size: 12px;
+      color: #548064;
+      font-weight: 700;
+    }
+
+    .strategy-card h3 {
+      font-size: 17px;
+      margin: 12px 0 8px;
+    }
+
+    .strategy-card p {
+      font-size: 13px;
+      color: #69746d;
+    }
+
+    .disclaimer {
+      margin-top: 50px;
+      padding: 22px;
+      border-radius: 14px;
+      background: #e9ece5;
+      font-size: 13px;
+      color: #5e6a61;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 30px 0;
+      font-size: 12px;
+      color: #7b857d;
+    }
+
+    @media (max-width: 650px) {
+      .page {
+        margin: 20px auto;
+      }
+
+      .strategy-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .hero-shape {
+        opacity: 0.45;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <header class="topbar">
+      <div class="brand">HZ / COPY STUDIO</div>
+      <div class="pill">Copywriting Project 02</div>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">Email Copywriting · SaaS</div>
+      <h1>A better first hello for a new user.</h1>
+      <p>
+        A welcome email concept for FlowPilot, a fictional
+        productivity tool designed to help people organise
+        tasks and keep their work moving.
+      </p>
+      <div class="hero-shape"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">01 — The Brief</div>
+      <h2>Turn a sign-up into a first step.</h2>
+      <p class="intro">
+        A welcome email should do more than say thank you.
+        It should reassure a new user, explain what to do next,
+        and make the first interaction feel simple.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="section-label">02 — The Copy</div>
+      <h2>The welcome email</h2>
+      <p class="intro">
+        The following is the proposed email copy, displayed
+        in a simple inbox-inspired layout.
+      </p>
+
+      <div class="email-shell">
+        <div class="email-header">
+          <div><strong>From:</strong> FlowPilot Team</div>
+          <div><strong>Subject:</strong> Your next clear step starts here</div>
+          <div><strong>Preview text:</strong> Let's get your workspace ready.</div>
+        </div>
+
+        <div class="email-body">
+          <div class="email-logo">flowpilot.</div>
+
+          <h3>Welcome aboard.<br>Let's make work flow.</h3>
+
+          <p>Hi there,</p>
+
+          <p>
+            Welcome to FlowPilot! We're glad you're here.
+            When your tasks, notes and priorities are scattered,
+            knowing where to start can feel harder than the work itself.
+          </p>
+
+          <p>
+            FlowPilot gives you one place to organise what matters
+            and see your next steps more clearly.
+          </p>
+
+          <p><strong>Ready to get started?</strong></p>
+
+          <p>
+            Create your first task, choose a priority, and give
+            yourself a clearer starting point for the day.
+          </p>
+
+          <a href="#email-strategy" class="email-button">
+            Set Up Your Workspace →
+          </a>
+
+          <p>
+            No need to organise everything at once.
+            Start with one task and build from there.
+          </p>
+
+          <p>
+            Here's to making progress feel a little simpler.
+          </p>
+
+          <p>
+            The FlowPilot Team
+          </p>
+
+          <div class="email-note">
+            You're receiving this sample as a portfolio concept.
+            FlowPilot is a fictional brand.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="email-strategy">
+      <div class="section-label">03 — The Thinking</div>
+      <h2>Why this email works</h2>
+
+      <div class="strategy-grid">
+        <article class="strategy-card">
+          <span>01 / REASSURE</span>
+          <h3>Start with empathy</h3>
+          <p>
+            Recognises a common organisation challenge before
+            introducing the product's value.
+          </p>
+        </article>
+
+        <article class="strategy-card">
+          <span>02 / SIMPLIFY</span>
+          <h3>One clear action</h3>
+          <p>
+            Guides the reader toward one practical first step
+            instead of listing every feature.
+          </p>
+        </article>
+
+        <article class="strategy-card">
+          <span>03 / ENCOURAGE</span>
+          <h3>Keep the pressure low</h3>
+          <p>
+            Friendly, straightforward language makes getting
+            started feel manageable.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="disclaimer">
+      <strong>Portfolio note:</strong>
+      This is an independent speculative copywriting project
+      created for portfolio demonstration. FlowPilot is fictional;
+      this work was not commissioned by or affiliated with a real client.
+    </section>
+
+    <footer>
+      <span>Hijab Zahra · Copywriting Portfolio</span>
+      <span>Independent Concept · 2026</span>
+    </footer>
+
+  </main>
+</body>
+</html>
+```

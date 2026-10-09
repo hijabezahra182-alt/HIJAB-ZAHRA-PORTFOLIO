@@ -1,0 +1,1157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SmartFAQs.ai Case Study | Hijab Zahra</title>
+
+  <meta name="description" content="An independent landing-page copywriting concept for SmartFAQs.ai by Hijab Zahra.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #24365b;
+      --muted: #66738d;
+      --purple: #7665df;
+      --lavender: #eeeaff;
+      --blue: #e4f2ff;
+      --mint: #e1f7eb;
+      --peach: #fff0e4;
+      --pink: #fbe8f3;
+      --white: #ffffff;
+      --border: #e7e9f2;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--navy);
+      background: #fbfaff;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      padding: 22px 0;
+      border-bottom: 1px solid rgba(36, 54, 91, 0.08);
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: "Manrope", sans-serif;
+      font-weight: 800;
+      font-size: 19px;
+    }
+
+    .brand-icon {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      color: white;
+      background: linear-gradient(135deg, #7665df, #9b8df7);
+      border-radius: 14px;
+      box-shadow: 0 7px 18px #7665df30;
+    }
+
+    .nav-link {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .nav-link:hover {
+      color: var(--purple);
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 82px 0 70px;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 5% 10%, #e8e4ff 0%, transparent 34%),
+        radial-gradient(ellipse at 96% 5%, #dff3ff 0%, transparent 34%),
+        #fbfaff;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      color: #6655cb;
+      border: 1px solid #e3ddff;
+      border-radius: 100px;
+      padding: 8px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .eyebrow span {
+      width: 8px;
+      height: 8px;
+      background: #8b79f2;
+      border-radius: 50%;
+    }
+
+    h1, h2, h3 {
+      font-family: "Manrope", sans-serif;
+      letter-spacing: -0.7px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 5vw, 59px);
+      line-height: 1.13;
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(100deg, #7864dc, #438dcf);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-description {
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 520px;
+      margin-bottom: 27px;
+    }
+
+    .button-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 20px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    .button-primary {
+      background: var(--purple);
+      color: white;
+      box-shadow: 0 9px 22px #7665df35;
+    }
+
+    .button-secondary {
+      background: white;
+      border: 1px solid var(--border);
+    }
+
+    .project-note {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 20px;
+    }
+
+    /* INTERFACE PREVIEW */
+
+    .visual {
+      position: relative;
+      padding: 25px;
+      background: linear-gradient(140deg, #ded8ff, #dff2ff 55%, #fce7f2);
+      border-radius: 32px;
+      transform: rotate(1deg);
+    }
+
+    .window {
+      background: white;
+      border: 1px solid #ffffff;
+      border-radius: 19px;
+      overflow: hidden;
+      box-shadow: 0 22px 50px #35477717;
+      transform: rotate(-1deg);
+    }
+
+    .window-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+      border-bottom: 1px solid #edf0f7;
+    }
+
+    .dots {
+      display: flex;
+      gap: 5px;
+    }
+
+    .dot {
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+    }
+
+    .dot:nth-child(1) { background: #ffaaa7; }
+    .dot:nth-child(2) { background: #ffd47b; }
+    .dot:nth-child(3) { background: #8cddb1; }
+
+    .window-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .chat {
+      padding: 22px 17px;
+    }
+
+    .chat-heading {
+      font-family: "Manrope", sans-serif;
+      font-size: 17px;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .chat-subtitle {
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .message {
+      padding: 13px;
+      border-radius: 12px;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    .message-user {
+      background: var(--lavender);
+      margin-left: 30px;
+    }
+
+    .message-ai {
+      background: #f5f8fc;
+      margin-right: 15px;
+    }
+
+    .source {
+      display: inline-block;
+      padding: 5px 8px;
+      margin-top: 8px;
+      border-radius: 6px;
+      background: var(--mint);
+      color: #24734c;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .fake-input {
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: #9aa4b7;
+      font-size: 11px;
+      margin-top: 17px;
+    }
+
+    /* SHARED SECTION STYLES */
+
+    section {
+      padding: 75px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 660px;
+      margin: 0 auto 42px;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: var(--purple);
+      letter-spacing: 1.3px;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: clamp(29px, 4vw, 40px);
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    /* PROJECT OVERVIEW */
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .overview-card {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 23px;
+      border-radius: 18px;
+    }
+
+    .overview-card:nth-child(1) { background: var(--lavender); }
+    .overview-card:nth-child(2) { background: var(--blue); }
+    .overview-card:nth-child(3) { background: var(--mint); }
+
+    .overview-card h3 {
+      font-size: 16px;
+      margin-bottom: 7px;
+    }
+
+    .overview-card p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* CHALLENGE */
+
+    .challenge {
+      background: white;
+    }
+
+    .challenge-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      align-items: start;
+      gap: 45px;
+    }
+
+    .challenge-copy {
+      color: var(--muted);
+    }
+
+    .challenge-copy p + p {
+      margin-top: 15px;
+    }
+
+    .goal-card {
+      padding: 30px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #eeeaff, #e6f5ff);
+    }
+
+    .goal-card .mini-label {
+      color: #6655cb;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .goal-card h3 {
+      font-size: 23px;
+      margin: 12px 0;
+      line-height: 1.35;
+    }
+
+    .goal-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* COPYWRITING SAMPLE */
+
+    .sample {
+      background: #f5f6ff;
+    }
+
+    .sample-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .sample-card {
+      background: white;
+      padding: 27px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .sample-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 30px #293e6410;
+    }
+
+    .card-icon {
+      display: grid;
+      place-items: center;
+      height: 46px;
+      width: 46px;
+      border-radius: 14px;
+      background: var(--lavender);
+      font-size: 22px;
+      margin-bottom: 17px;
+    }
+
+    .sample-card:nth-child(2) .card-icon { background: var(--blue); }
+    .sample-card:nth-child(3) .card-icon { background: var(--mint); }
+    .sample-card:nth-child(4) .card-icon { background: var(--peach); }
+
+    .sample-card h3 {
+      font-size: 18px;
+      margin-bottom: 9px;
+    }
+
+    .sample-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* BEFORE AND AFTER */
+
+    .rewrite {
+      background: white;
+    }
+
+    .rewrite-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .rewrite-card {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 20px;
+      padding: 22px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      align-items: start;
+    }
+
+    .rewrite-before,
+    .rewrite-after {
+      padding: 15px;
+      border-radius: 12px;
+    }
+
+    .rewrite-before {
+      background: #f3f4f8;
+    }
+
+    .rewrite-after {
+      background: var(--mint);
+    }
+
+    .small-label {
+      display: block;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: var(--muted);
+    }
+
+    .rewrite-after .small-label {
+      color: #24734c;
+    }
+
+    .rewrite-before p,
+    .rewrite-after p {
+      font-size: 13px;
+    }
+
+    /* APPROACH */
+
+    .approach {
+      background: linear-gradient(135deg, #eeeaff, #e9f6ff);
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 17px;
+    }
+
+    .approach-card {
+      background: #ffffffd9;
+      padding: 23px;
+      border-radius: 16px;
+      border: 1px solid #ffffff;
+    }
+
+    .approach-card h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .approach-card p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .number {
+      display: inline-grid;
+      place-items: center;
+      width: 31px;
+      height: 31px;
+      background: white;
+      color: var(--purple);
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 13px;
+    }
+
+    /* CTA */
+
+    .cta-section {
+      padding: 75px 0;
+    }
+
+    .cta-box {
+      text-align: center;
+      padding: 48px 25px;
+      border-radius: 26px;
+      background: linear-gradient(125deg, #7665df, #568fdb);
+      color: white;
+    }
+
+    .cta-box h2 {
+      max-width: 650px;
+      margin: 0 auto 15px;
+    }
+
+    .cta-box p {
+      max-width: 600px;
+      margin: 0 auto 24px;
+      color: #f0efff;
+    }
+
+    .cta-box .button {
+      background: white;
+      color: #5445bb;
+    }
+
+    /* PROJECT DISCLOSURE */
+
+    .disclosure {
+      margin-top: 26px;
+      padding: 17px;
+      background: var(--peach);
+      border: 1px solid #f5dfcc;
+      border-radius: 14px;
+      color: #79553c;
+      font-size: 12px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 27px 0;
+      background: white;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    footer p,
+    footer a {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    footer a:hover {
+      color: var(--purple);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+      .hero-grid,
+      .challenge-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 55px 0;
+      }
+
+      .visual {
+        max-width: 530px;
+        margin: auto;
+      }
+
+      .overview-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sample-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .rewrite-card {
+        grid-template-columns: 1fr;
+      }
+
+      .approach-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav-link {
+        font-size: 12px;
+      }
+
+      .brand {
+        font-size: 16px;
+      }
+
+      .brand-icon {
+        width: 36px;
+        height: 36px;
+      }
+
+      .visual {
+        padding: 12px;
+        border-radius: 22px;
+      }
+
+      .goal-card,
+      .sample-card {
+        padding: 21px;
+      }
+
+      .button-row .button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="#top">
+        <span class="brand-icon">HZ</span>
+        Hijab Zahra
+      </a>
+
+      <a class="nav-link" href="#case-study">
+        Explore Case Study ↗
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+
+  <header class="hero" id="top">
+    <div class="container hero-grid">
+
+      <div>
+        <span class="eyebrow">
+          <span></span>
+          Copywriting Case Study 01
+        </span>
+
+        <h1>
+          Making AI
+          <span class="gradient-text">easier to understand.</span>
+        </h1>
+
+        <p class="hero-description">
+          A landing-page copywriting concept for SmartFAQs.ai,
+          exploring how clear, benefit-focused messaging can
+          communicate the value of evidence-based AI.
+        </p>
+
+        <div class="button-row">
+          <a href="#case-study" class="button button-primary">
+            Explore the project ↓
+          </a>
+
+          <a
+            href="https://smartfaqs.ai/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button-secondary"
+          >
+            Visit SmartFAQs.ai ↗
+          </a>
+        </div>
+
+        <p class="project-note">
+          An independent speculative project — not official company copy.
+        </p>
+      </div>
+
+      <!-- DECORATIVE CHAT INTERFACE -->
+
+      <div class="visual" aria-label="Illustrative AI chat interface">
+        <div class="window">
+
+          <div class="window-top">
+            <div class="dots">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+
+            <span class="window-label">AI KNOWLEDGE ASSISTANT</span>
+          </div>
+
+          <div class="chat">
+            <div class="chat-heading">Let's find an answer.</div>
+
+            <div class="chat-subtitle">
+              An illustrative product concept
+            </div>
+
+            <div class="message message-user">
+              Can you help me find important information in my document?
+            </div>
+
+            <div class="message message-ai">
+              I can help you explore information from your uploaded
+              document and identify relevant passages.
+              <br>
+              <span class="source">▤ Example source citation</span>
+            </div>
+
+            <div class="message message-user">
+              Great! I want to understand it more easily.
+            </div>
+
+            <div class="fake-input">
+              Ask a question about your documents... ↗
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <main id="case-study">
+
+    <!-- PROJECT OVERVIEW -->
+
+    <section>
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-label">Project overview</span>
+
+          <h2>A small project with a clear purpose.</h2>
+
+          <p>
+            Understanding a product, identifying its value,
+            and expressing that value in simple, useful language.
+          </p>
+        </div>
+
+        <div class="overview-grid">
+
+          <article class="overview-card">
+            <h3>✦ Industry</h3>
+            <p>Artificial intelligence and SaaS products.</p>
+          </article>
+
+          <article class="overview-card">
+            <h3>✎ Project type</h3>
+            <p>Independent landing-page copywriting concept.</p>
+          </article>
+
+          <article class="overview-card">
+            <h3>◎ Deliverables</h3>
+            <p>Hero copy, feature descriptions, CTAs, and messaging rationale.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- THE CHALLENGE -->
+
+    <section class="challenge">
+      <div class="container challenge-grid">
+
+        <div>
+          <span class="section-label">01 / The challenge</span>
+          <h2>Technology is useful only when people understand its value.</h2>
+        </div>
+
+        <div class="challenge-copy">
+          <p>
+            AI products can sound complicated when their messaging
+            focuses on technology instead of what people can accomplish
+            with it.
+          </p>
+
+          <p>
+            For this concept, I focused on communicating the value of
+            asking questions about documents, finding relevant information,
+            and checking source passages behind AI-generated answers.
+          </p>
+
+          <p>
+            The goal was to make the messaging clearer without
+            inventing product capabilities or promising unverified results.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- THE HERO COPY -->
+
+    <section>
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-label">02 / The main message</span>
+          <h2>A headline built around the user's problem.</h2>
+          <p>
+            Rather than leading with technical terminology,
+            the proposed headline focuses on finding information.
+          </p>
+        </div>
+
+        <div class="goal-card">
+          <span class="mini-label">Proposed landing-page headline</span>
+
+          <h3>
+            Your documents have answers.
+            Make them easier to find.
+          </h3>
+
+          <p>
+            Turn complex documents into a knowledge experience people
+            can actually use. Upload your information, ask questions in
+            natural language, and get AI-generated answers with citations
+            to source passages.
+          </p>
+
+          <div class="button-row" style="margin-top: 23px;">
+            <a
+              href="https://smartfaqs.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="button button-primary"
+            >
+              Explore SmartFAQs.ai ↗
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FEATURE COPY -->
+
+    <section class="sample">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-label">03 / The copywriting sample</span>
+          <h2>Features translated into benefits.</h2>
+          <p>
+            Each description connects a product capability to a
+            practical reason someone might care about it.
+          </p>
+        </div>
+
+        <div class="sample-grid">
+
+          <article class="sample-card">
+            <div class="card-icon">📄</div>
+            <h3>Work with your documents</h3>
+            <p>
+              Upload supported documents and use AI to explore their
+              contents and find relevant information.
+            </p>
+          </article>
+
+          <article class="sample-card">
+            <div class="card-icon">💬</div>
+            <h3>Ask questions naturally</h3>
+            <p>
+              Explore information through conversational questions
+              instead of searching through every page manually.
+            </p>
+          </article>
+
+          <article class="sample-card">
+            <div class="card-icon">🔎</div>
+            <h3>Explore the source</h3>
+            <p>
+              Use citations to inspect the passages behind an answer
+              and check the supporting information.
+            </p>
+          </article>
+
+          <article class="sample-card">
+            <div class="card-icon">🎙️</div>
+            <h3>Explore voice interactions</h3>
+            <p>
+              Discover another way to interact with information
+              through an AI voice-agent experience.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE TO BENEFIT -->
+
+    <section class="rewrite">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-label">04 / My writing decisions</span>
+          <h2>From describing features to communicating value.</h2>
+          <p>
+            Here is the thinking behind the proposed messaging.
+          </p>
+        </div>
+
+        <div class="rewrite-list">
+
+          <article class="rewrite-card">
+            <div class="rewrite-before">
+              <span class="small-label">Feature-focused</span>
+              <p>AI can answer questions about documents.</p>
+            </div>
+
+            <div class="rewrite-after">
+              <span class="small-label">Benefit-focused</span>
+              <p>
+                Find answers without manually searching through
+                lengthy documents.
+              </p>
+            </div>
+          </article>
+
+          <article class="rewrite-card">
+            <div class="rewrite-before">
+              <span class="small-label">Feature-focused</span>
+              <p>The answers include citations.</p>
+            </div>
+
+            <div class="rewrite-after">
+              <span class="small-label">Benefit-focused</span>
+              <p>
+                See the source passages behind an answer and
+                check the information for yourself.
+              </p>
+            </div>
+          </article>
+
+          <article class="rewrite-card">
+            <div class="rewrite-before">
+              <span class="small-label">Feature-focused</span>
+              <p>The platform offers an AI voice agent.</p>
+            </div>
+
+            <div class="rewrite-after">
+              <span class="small-label">Benefit-focused</span>
+              <p>
+                Explore information through a voice-based
+                AI experience.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- STRATEGY -->
+
+    <section class="approach">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-label">05 / The strategy</span>
+          <h2>Why I chose this approach.</h2>
+          <p>
+            Effective copywriting starts with understanding
+            the reader, not just writing attractive sentences.
+          </p>
+        </div>
+
+        <div class="approach-grid">
+
+          <article class="approach-card">
+            <span class="number">01</span>
+            <h3>Lead with a recognizable problem</h3>
+            <p>
+              The headline connects with people who need to find
+              information in documents.
+            </p>
+          </article>
+
+          <article class="approach-card">
+            <span class="number">02</span>
+            <h3>Use straightforward language</h3>
+            <p>
+              Clear sentences make the product easier to understand
+              without unnecessary technical jargon.
+            </p>
+          </article>
+
+          <article class="approach-card">
+            <span class="number">03</span>
+            <h3>Highlight a meaningful differentiator</h3>
+            <p>
+              Source citations provide a concrete reason to pay
+              attention to the evidence-based approach.
+            </p>
+          </article>
+
+          <article class="approach-card">
+            <span class="number">04</span>
+            <h3>Give the reader a next step</h3>
+            <p>
+              A direct call to action invites interested readers
+              to explore the product further.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+
+    <section class="cta-section">
+      <div class="container">
+
+        <div class="cta-box">
+          <h2>Good copy makes complex ideas easier to understand.</h2>
+
+          <p>
+            This project demonstrates my approach to product messaging,
+            benefit-led writing, and communicating technical ideas clearly.
+          </p>
+
+          <a
+            href="https://smartfaqs.ai/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button"
+          >
+            Visit the official website ↗
+          </a>
+        </div>
+
+        <div class="disclosure">
+          <strong>Project transparency:</strong>
+          This is an independent speculative copywriting project.
+          It was not commissioned by or created in partnership with
+          SmartFAQs.ai. The proposed copy is not official company
+          messaging. No conversion rates, business results, or
+          customer outcomes are claimed. Product details should be
+          checked against the official website before publication.
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Hijab Zahra · Copywriting Portfolio</p>
+
+      <a href="https://smartfaqs.ai/" target="_blank" rel="noopener noreferrer">
+        SmartFAQs.ai official website ↗
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>

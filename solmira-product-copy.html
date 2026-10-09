@@ -1,0 +1,476 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solmira — E-commerce Copywriting Case Study</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #f7f4ed;
+      color: #2d3a30;
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.7;
+    }
+
+    .page {
+      width: min(100% - 32px, 1080px);
+      margin: 36px auto;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 35px;
+      color: #7a8276;
+      font-size: 12px;
+    }
+
+    .brand {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      color: #38523d;
+      font-size: 21px;
+      letter-spacing: 2px;
+    }
+
+    .tag {
+      border: 1px solid #d9dfd0;
+      border-radius: 30px;
+      padding: 7px 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 10px;
+    }
+
+    .hero {
+      background: #e8eadc;
+      border-radius: 26px;
+      padding: clamp(28px, 5vw, 58px);
+    }
+
+    .eyebrow, .section-label {
+      color: #77856c;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Manrope', sans-serif;
+      line-height: 1.2;
+    }
+
+    h1 {
+      max-width: 740px;
+      font-size: clamp(38px, 7vw, 72px);
+      letter-spacing: -3px;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #626f5c;
+      font-size: 16px;
+    }
+
+    .section {
+      margin-top: 58px;
+    }
+
+    h2 {
+      font-size: clamp(27px, 4vw, 40px);
+      letter-spacing: -1.5px;
+      margin-bottom: 16px;
+    }
+
+    .intro {
+      max-width: 720px;
+      color: #72796f;
+    }
+
+    .product-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 28px;
+      align-items: stretch;
+    }
+
+    .product-art {
+      min-height: 450px;
+      border-radius: 22px;
+      background: linear-gradient(145deg, #e8ddca, #c8d5bb);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .sun {
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      background: #f5e9b9;
+      border-radius: 50%;
+      top: 42px;
+      right: -40px;
+      opacity: .8;
+    }
+
+    .leaf {
+      position: absolute;
+      width: 130px;
+      height: 210px;
+      border-radius: 100% 0 100% 0;
+      background: #92a78b;
+      bottom: -45px;
+      left: -20px;
+      transform: rotate(-25deg);
+    }
+
+    .bottle {
+      position: relative;
+      z-index: 2;
+      width: 155px;
+      height: 245px;
+      background: linear-gradient(90deg, #f4eddf, #fffaf0 50%, #e8dfce);
+      border-radius: 23px 23px 30px 30px;
+      box-shadow: 18px 24px 45px rgba(63, 75, 52, .18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .bottle::before {
+      content: "";
+      position: absolute;
+      width: 65px;
+      height: 30px;
+      top: -28px;
+      background: #536c51;
+      border-radius: 7px 7px 3px 3px;
+    }
+
+    .bottle-copy {
+      font-family: 'Manrope', sans-serif;
+      font-size: 13px;
+      letter-spacing: 2px;
+      color: #40533f;
+      line-height: 1.5;
+    }
+
+    .bottle-copy small {
+      display: block;
+      font-size: 8px;
+      letter-spacing: 1px;
+      margin-top: 12px;
+    }
+
+    .product-info {
+      background: #fffefa;
+      border: 1px solid #e9e6db;
+      border-radius: 22px;
+      padding: clamp(24px, 4vw, 40px);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .product-type {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #829077;
+      margin-bottom: 12px;
+    }
+
+    .product-info h3 {
+      font-size: clamp(27px, 4vw, 38px);
+      letter-spacing: -1.5px;
+      margin-bottom: 16px;
+    }
+
+    .product-info p {
+      color: #73796e;
+      margin-bottom: 18px;
+    }
+
+    .benefit-list {
+      list-style: none;
+      margin: 4px 0 22px;
+    }
+
+    .benefit-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eeece4;
+      font-size: 14px;
+    }
+
+    .benefit-list li::before {
+      content: "✳ ";
+      color: #819674;
+      margin-right: 8px;
+    }
+
+    .cta {
+      display: inline-block;
+      background: #3c5940;
+      color: #fff;
+      text-decoration: none;
+      padding: 13px 20px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-top: auto;
+    }
+
+    .copy-card {
+      background: #fffefa;
+      border: 1px solid #e9e6db;
+      border-radius: 18px;
+      padding: 24px;
+      margin-top: 18px;
+    }
+
+    .copy-card h3 {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .copy-card p {
+      color: #70786d;
+      font-size: 14px;
+    }
+
+    .strategy-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .strategy {
+      background: #e8eadc;
+      border-radius: 16px;
+      padding: 22px;
+    }
+
+    .strategy span {
+      color: #74836a;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .strategy h3 {
+      font-size: 17px;
+      margin: 12px 0 8px;
+    }
+
+    .strategy p {
+      font-size: 13px;
+      color: #6d7666;
+    }
+
+    .disclaimer {
+      margin-top: 50px;
+      padding: 22px;
+      background: #e9e7df;
+      border-radius: 14px;
+      color: #697064;
+      font-size: 13px;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 28px 0;
+      font-size: 12px;
+      color: #7a8276;
+    }
+
+    @media (max-width: 700px) {
+      .product-layout, .strategy-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-art {
+        min-height: 350px;
+      }
+
+      h1 {
+        letter-spacing: -1.5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <header class="topbar">
+      <div class="brand">HZ / COPY STUDIO</div>
+      <div class="tag">Copywriting Project 03</div>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">E-commerce · Product Copy</div>
+      <h1>Make the product feel worth discovering.</h1>
+      <p>
+        A product-page copy concept for Solmira, a fictional
+        skincare brand with a calm, nature-inspired identity.
+        The goal is to make the product easy to understand
+        without relying on exaggerated promises.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="section-label">01 — The Product</div>
+      <h2>Meet the Solmira Daily Moisturiser.</h2>
+      <p class="intro">
+        The concept uses simple, benefit-led language to help
+        shoppers understand the imagined product and picture
+        where it could fit into their routine.
+      </p>
+
+      <div class="product-layout">
+
+        <div class="product-art">
+          <div class="sun"></div>
+          <div class="leaf"></div>
+
+          <div class="bottle">
+            <div class="bottle-copy">
+              SOLMIRA
+              <small>DAILY MOISTURISER</small>
+              <small>YOUR DAILY RITUAL</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-info">
+          <div class="product-type">Everyday skincare · Concept</div>
+          <h3>A softer start to your day.</h3>
+
+          <p>
+            Meet your everyday moisturising ritual: a simple,
+            considered step designed to leave your skincare
+            routine feeling less complicated.
+          </p>
+
+          <ul class="benefit-list">
+            <li>Easy to fit into a daily routine</li>
+            <li>A clean, uncomplicated product experience</li>
+            <li>Designed around everyday comfort</li>
+          </ul>
+
+          <a href="#copy-breakdown" class="cta">
+            EXPLORE THE COPY →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section" id="copy-breakdown">
+      <div class="section-label">02 — Copy Breakdown</div>
+      <h2>Writing with a purpose.</h2>
+      <p class="intro">
+        Each element has a job: attract attention, explain
+        the value, or help the shopper decide what to do next.
+      </p>
+
+      <div class="copy-card">
+        <h3>Headline</h3>
+        <p>“A softer start to your day.”</p>
+      </div>
+
+      <div class="copy-card">
+        <h3>Supporting description</h3>
+        <p>
+          “Meet your everyday moisturising ritual: a simple,
+          considered step designed to leave your skincare
+          routine feeling less complicated.”
+        </p>
+      </div>
+
+      <div class="copy-card">
+        <h3>Call to action</h3>
+        <p>“Explore the copy” — used here as a portfolio navigation
+          link. On a real product page, a purchase-focused CTA
+          could be tested against the brand's actual shopping journey.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">03 — The Strategy</div>
+      <h2>Why this approach?</h2>
+
+      <div class="strategy-grid">
+        <article class="strategy">
+          <span>01 / CLARITY</span>
+          <h3>Lead with the experience</h3>
+          <p>
+            The headline creates a mood while the description
+            explains the product's role in the routine.
+          </p>
+        </article>
+
+        <article class="strategy">
+          <span>02 / TRUST</span>
+          <h3>Avoid overpromising</h3>
+          <p>
+            No invented clinical results, ingredient claims,
+            or promises about skin outcomes.
+          </p>
+        </article>
+
+        <article class="strategy">
+          <span>03 / FLOW</span>
+          <h3>Make it scannable</h3>
+          <p>
+            Short paragraphs and concise benefit points help
+            shoppers find the key information quickly.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="disclaimer">
+      <strong>Portfolio note:</strong>
+      Solmira and this product are fictional. This is an
+      independent speculative copywriting project, not work
+      commissioned by or affiliated with a real brand.
+      Product benefits are illustrative, not verified claims.
+    </section>
+
+    <footer>
+      <span>Hijab Zahra · Copywriting Portfolio</span>
+      <span>Independent Concept · 2026</span>
+    </footer>
+
+  </main>
+</body>
+</html>
+```

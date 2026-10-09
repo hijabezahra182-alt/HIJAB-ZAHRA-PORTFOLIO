@@ -1,0 +1,397 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taskora — LinkedIn Copywriting Case Study</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #f4f5fa;
+      color: #242d43;
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.7;
+    }
+
+    .page {
+      width: min(100% - 32px, 1000px);
+      margin: 36px auto;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 34px;
+    }
+
+    .brand {
+      font-family: 'Manrope', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: #344b88;
+    }
+
+    .tag {
+      padding: 7px 13px;
+      border: 1px solid #d9ddec;
+      border-radius: 30px;
+      color: #6e7790;
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      padding: clamp(28px, 6vw, 60px);
+      background: linear-gradient(135deg, #e4e8ff, #e4f4f0);
+      border-radius: 26px;
+    }
+
+    .eyebrow, .section-label {
+      color: #6978a5;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Manrope', sans-serif;
+      line-height: 1.25;
+    }
+
+    h1 {
+      max-width: 750px;
+      font-size: clamp(38px, 7vw, 68px);
+      letter-spacing: -2px;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #626f8b;
+      font-size: 16px;
+    }
+
+    .section {
+      margin-top: 55px;
+    }
+
+    h2 {
+      font-size: clamp(27px, 4vw, 39px);
+      letter-spacing: -1px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      color: #727b91;
+      max-width: 700px;
+    }
+
+    .post-card {
+      max-width: 650px;
+      margin: 28px auto 0;
+      background: #ffffff;
+      border: 1px solid #e1e5ef;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 16px 45px rgba(50, 62, 100, .07);
+    }
+
+    .post-top {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding: 22px;
+      border-bottom: 1px solid #edf0f6;
+    }
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #a9b7ff, #b9e6d9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      color: #334b83;
+    }
+
+    .profile-name {
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .profile-sub {
+      font-size: 11px;
+      color: #8991a5;
+    }
+
+    .post-body {
+      padding: 25px;
+      white-space: normal;
+    }
+
+    .post-body p {
+      margin-bottom: 17px;
+      font-size: 14px;
+    }
+
+    .post-body .hook {
+      font-size: 22px;
+      font-weight: 700;
+      font-family: 'Manrope', sans-serif;
+      line-height: 1.45;
+      color: #344b88;
+    }
+
+    .post-body .hashtags {
+      color: #5c70b1;
+      line-height: 2;
+    }
+
+    .post-actions {
+      padding: 15px 22px;
+      border-top: 1px solid #edf0f6;
+      color: #838ca0;
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .strategy-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .strategy {
+      padding: 22px;
+      border: 1px solid #e1e5ef;
+      border-radius: 17px;
+      background: #ffffff;
+    }
+
+    .strategy span {
+      color: #6879b3;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .strategy h3 {
+      font-size: 17px;
+      margin: 12px 0 8px;
+    }
+
+    .strategy p {
+      font-size: 13px;
+      color: #747e93;
+    }
+
+    .disclaimer {
+      margin-top: 48px;
+      padding: 22px;
+      border-radius: 14px;
+      background: #e8eaf4;
+      color: #65708b;
+      font-size: 13px;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 28px 0;
+      font-size: 12px;
+      color: #858da0;
+    }
+
+    @media (max-width: 650px) {
+      .strategy-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .post-body {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <header class="topbar">
+      <div class="brand">HZ / COPY STUDIO</div>
+      <div class="tag">Copywriting Project 04</div>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">B2B Content · LinkedIn</div>
+      <h1>Useful content starts a conversation.</h1>
+      <p>
+        A LinkedIn post concept for Taskora, a fictional
+        productivity SaaS brand. The goal is to connect with
+        busy teams through a relatable problem and a practical idea.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="section-label">01 — The Brief</div>
+      <h2>Don't just promote the product.</h2>
+      <p class="intro">
+        Business content can offer value before asking for attention.
+        This post starts with a common work problem, shares a simple
+        perspective, and connects that idea to the fictional brand.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="section-label">02 — The Post</div>
+      <h2>Ready for LinkedIn</h2>
+      <p class="intro">
+        A proposed organic post, written in a conversational,
+        professional tone.
+      </p>
+
+      <article class="post-card">
+
+        <div class="post-top">
+          <div class="avatar">T</div>
+          <div>
+            <div class="profile-name">Taskora</div>
+            <div class="profile-sub">
+              Helping teams organise their work · Sample concept
+            </div>
+          </div>
+        </div>
+
+        <div class="post-body">
+
+          <p class="hook">
+            Your team might not need another meeting.
+            It might need clearer priorities.
+          </p>
+
+          <p>
+            Ever finished a meeting with a full page of notes
+            but no clear idea of what happens next?
+          </p>
+
+          <p>
+            It's easy for teams to confuse being busy with
+            making progress.
+          </p>
+
+          <p>
+            Try three simple questions before your next project starts:
+          </p>
+
+          <p>
+            → What matters most right now?<br>
+            → Who owns the next step?<br>
+            → How will we know it's done?
+          </p>
+
+          <p>
+            Clear priorities won't solve every workflow problem.
+            But they can make the next step easier to see.
+          </p>
+
+          <p>
+            At Taskora, we believe good organisation should help
+            teams spend less time figuring out the work and more
+            time moving it forward.
+          </p>
+
+          <p>
+            What's one small habit that helps your team stay aligned?
+          </p>
+
+          <p class="hashtags">
+            #Productivity #Teamwork #WorkManagement
+          </p>
+
+        </div>
+
+        <div class="post-actions">
+          <span>Post copy concept</span>
+          <span>Engagement prompt included</span>
+        </div>
+
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-label">03 — The Strategy</div>
+      <h2>What makes the post work?</h2>
+
+      <div class="strategy-grid">
+
+        <article class="strategy">
+          <span>01 / HOOK</span>
+          <h3>Lead with a tension</h3>
+          <p>
+            Opens with a familiar workplace problem to give
+            the reader a reason to continue.
+          </p>
+        </article>
+
+        <article class="strategy">
+          <span>02 / VALUE</span>
+          <h3>Offer something useful</h3>
+          <p>
+            Gives readers three practical questions they can
+            try without needing to buy anything.
+          </p>
+        </article>
+
+        <article class="strategy">
+          <span>03 / CONVERSATION</span>
+          <h3>End with a question</h3>
+          <p>
+            Invites readers to share their own experiences
+            instead of using an aggressive sales pitch.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="disclaimer">
+      <strong>Portfolio note:</strong>
+      Taskora is a fictional brand. This is an independent
+      speculative copywriting project created for portfolio
+      demonstration, not commissioned work for a real client.
+    </section>
+
+    <footer>
+      <span>Hijab Zahra · Copywriting Portfolio</span>
+      <span>Independent Concept · 2026</span>
+    </footer>
+
+  </main>
+</body>
+</html>
+```
